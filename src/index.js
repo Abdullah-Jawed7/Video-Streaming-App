@@ -2,8 +2,8 @@ import dotenv from "dotenv"
 import connectDB from "./db/index.js"
 import { app } from "./app.js"
 
-const port = process.env.PORT || 8000
 dotenv.config()
+const port = process.env.PORT || 8000
 connectDB()
 .then(()=>{
     app.on("error",(err)=>{
@@ -19,3 +19,5 @@ connectDB()
 .catch((error)=> { 
     console.log("DB Connection Failed !! ", error)}
 )
+
+// 7:06
